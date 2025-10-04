@@ -1,11 +1,11 @@
-# toDoApp.py
-
 tasks=[]
 
+# Adds a task to the tasks list
 def addtask(task) :
   tasks.append(task)
   print("task added!")
 
+# Iterates to the tasks list and prints it 
 def showTasks( ):
     if len(tasks)==0 :
       print("no tasks yet")
@@ -13,12 +13,15 @@ def showTasks( ):
      for i in range (len(tasks)):
       print(i+1,".",tasks[i])
 
+# Removes items to the tasks list
 def removetask(tasknumber):
     tasks.pop(tasknumber) 
     print("task removed!!")
 
+# Main function
 def main():
     while True:
+        # To-Do App UI
         print("1 Add Task")
         print("2.Show Tasks")
         print("3.Remove Task")
@@ -36,4 +39,6 @@ def main():
             break;
         else:
             print("wrong choice!!")
+
+# Calls the main function
 main()
