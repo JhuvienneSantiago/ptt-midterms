@@ -31,7 +31,13 @@ def main():
             showTasks()
         elif choice == "3":
             taskToRemove=int(input("enter task no to remove: "))
-            removeTask(taskToRemove)
+            try:
+                if tasksList[taskToRemove - 1] in tasksList:
+                    removeTask(taskToRemove)
+                else:
+                    print("Task does not exist.")
+            except:
+                print("Error.")
         elif choice == "4":
             break
         else:
