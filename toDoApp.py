@@ -25,17 +25,18 @@ def main():
         print("|     [3] Remove Task          |")
         print("|     [4] Exit                 |")
         print("+==============================+")
-        ch = input("enter choice : ")
+        ch = input("Choose an Option: ")
         if ch=="1":
-            t = input("enter task : ")
+            t = input("Enter Task Name: ")
             addtask(t)
         elif ch=="2":
             showTasks()
         elif ch=="3":
-            n = int(input("Enter task # to remove: "))
+            showTasks()
+            n = int(input("Enter Task # to Remove: "))
             removetask(n)   
         elif ch=="4":
-            break;
+            break
         else:
-            print("wrong choice!!")
+            print("Invalid Input, Please Try Again..")
 main()
