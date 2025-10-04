@@ -6,6 +6,7 @@ def addtask(taskToAdd) :
     tasksList.append(taskToAdd)
     print("task added!")
 
+# Iterates to the tasks list and prints it 
 def showTasks( ):
     if (len(tasksList) == 0):
         print("no tasks yet")
@@ -17,8 +18,10 @@ def removeTask(taskToRemove):
     tasksList.pop(taskToRemove - 1) 
     print("task removed!!")
 
+# Main function
 def main():
     while True:
+        # To-Do App UI
         print("1 Add Task")
         print("2.Show Tasks")
         print("3.Remove Task")
@@ -42,4 +45,6 @@ def main():
             break
         else:
             print("wrong choice!!")
+
+# Calls the main function
 main()
