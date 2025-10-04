@@ -31,5 +31,5 @@ Upon running the app, the user will be prompted to choose one out the four funct
 - Exit
     - It will simply terminate the program.
 
-## Notes
+### Notes
 Tasks are not permenantly saved, once the program ends, the list will reset.
