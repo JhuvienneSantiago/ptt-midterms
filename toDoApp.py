@@ -1,21 +1,21 @@
-tasks=[]
+# toDoApp.py
 
-# Adds a task to the tasks list
-def addtask(task) :
-  tasks.append(task)
-  print("task added!")
+tasksList=[]
+
+def addtask(taskToAdd) :
+    tasksList.append(taskToAdd)
+    print("task added!")
 
 # Iterates to the tasks list and prints it 
 def showTasks( ):
-    if len(tasks)==0 :
-      print("no tasks yet")
+    if (len(tasksList) == 0):
+        print("no tasks yet")
     else:
-     for i in range (len(tasks)):
-      print(i+1,".",tasks[i])
+        for i in range (len(tasksList)):
+            print(i + 1, "-" , tasksList[i])
 
-# Removes items to the tasks list
-def removetask(tasknumber):
-    tasks.pop(tasknumber) 
+def removeTask(taskToRemove):
+    tasksList.pop(taskToRemove - 1) 
     print("task removed!!")
 
 # Main function
@@ -26,17 +26,23 @@ def main():
         print("2.Show Tasks")
         print("3.Remove Task")
         print("4- Exit")
-        ch = input("enter choice : ")
-        if ch=="1":
-            t = input("enter task : ")
-            addtask(t)
-        elif ch=="2":
+        choice = input("enter choice : ")
+        if choice == "1":
+            taskToAdd = input("enter task : ")
+            addtask(taskToAdd)
+        elif choice == "2":
             showTasks()
-        elif ch=="3":
-            n=int(input("enter task no to remove: "))
-            removetask(n)   
-        elif ch=="4":
-            break;
+        elif choice == "3":
+            taskToRemove=int(input("enter task no to remove: "))
+            try:
+                if tasksList[taskToRemove - 1] in tasksList:
+                    removeTask(taskToRemove)
+                else:
+                    print("Task does not exist.")
+            except:
+                print("Error.")
+        elif choice == "4":
+            break
         else:
             print("wrong choice!!")
 
