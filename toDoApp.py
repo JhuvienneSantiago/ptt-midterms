@@ -11,7 +11,7 @@ def showTasks( ):
         print("no tasks yet")
     else:
         for i in range (len(tasksList)):
-            print(i + 1, "." , tasksList[i])
+            print(i + 1, "-" , tasksList[i])
 
 def removeTask(taskToRemove):
     tasksList.pop(taskToRemove - 1) 
@@ -31,7 +31,7 @@ def main():
             showTasks()
         elif choice == "3":
             taskToRemove=int(input("enter task no to remove: "))
-            removetask(taskToRemove)
+            removeTask(taskToRemove)
         elif choice == "4":
             break
         else:
